@@ -49,7 +49,7 @@ const PdfSection = ({ searchQuery }) => {
       }
     };
     fetchData();
-  }, [searchQuery, user.token]);
+  }, [searchQuery]);
 
   return (
     <>

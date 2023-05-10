@@ -66,7 +66,7 @@ function Register() {
             <a href="k">
               <FaUserCircle className="text-white text-8xl" />
             </a>
-            <h4 className="text-white mt-2 text-2xl">Singn Up</h4>
+            <h4 className="text-white mt-2 text-2xl">SIGN UP </h4>
           </div>
           <div className="">
             <form className="">

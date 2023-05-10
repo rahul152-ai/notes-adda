@@ -227,17 +227,5 @@ router.get("/search", auth, async (req, res) => {
     return res.status(500).json({ message: error.message });
   }
 });
-//route to get notes by id with comment using poppulate
-// router.get("/noteswithcomment", async (req, res) => {
-//   const id = req.body.id;
-
-//   try {
-//     const note = await Notes.findById(id).populate("comments").exec();
-
-//     return res.json({ status: "200", note });
-//   } catch (error) {
-//     return res.json({ status: "404", error: error.message });
-//   }
-// });
 
 module.exports = router;
