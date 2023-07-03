@@ -31,7 +31,7 @@ const Navbar = (props) => {
   // console.log(searchQuery);
   return (
     <>
-      <nav className="flex  items-center bg-[#242429] justify-between p-4 sm:flex sm:justify-between static top-0 z-40">
+      <nav className="flex sticky items-center bg-[#242429] justify-between p-4 sm:flex sm:justify-between  top-0 z-40">
         <Link to="/" className="logo text-[white] flex gap-2 font-bold">
           <div>
             <hr className="w-9 bg-[white]" />
