@@ -40,4 +40,4 @@ How to use the Notes_Adda web application
 create a account
 login with you crediential
 
-To share notes go to share notes and provide the required content
+To share notes go to share notes and provide the required content test
