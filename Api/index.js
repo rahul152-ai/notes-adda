@@ -23,6 +23,6 @@ app.use("/api", userRoute);
 app.use("/api/notes", notesRoute);
 app.use("/api", commentRoute);
 
-app.listen(3000, () => {
-  console.log("You application is running on port 3000");
+app.listen(3008, () => {
+  console.log("You application is running on port 3008");
 });

@@ -13,12 +13,10 @@ function auth(req, res, next) {
     req.user = decoded;
     next();
   } catch (e) {
-    res
-      .status(401)
-      .json({
-        message:
-          "Unauthorized frist create a account and login then you can view notes",
-      });
+    res.status(401).json({
+      message:
+        "Unauthorized frist create a account and login then you can view notes",
+    });
   }
 }
 

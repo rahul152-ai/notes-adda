@@ -1,5 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { signInWithPopup, linkWithPopup } from "firebase/auth";
+import { provider, auth } from "./fireBaseConfig";
+
 import {
   FaUserCircle,
   FaGoogle,
@@ -47,6 +50,36 @@ function Login() {
       }, 1000);
     } catch (error) {
       return toast.error(error);
+    }
+  };
+
+  const loginWithFacebook = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+
+      // Check if the user already exists with different credentials
+      const isAccountExistsError =
+        result.code === "auth/account-exists-with-different-credential";
+
+      if (!isAccountExistsError) {
+        // This is a new user or a user with the same credentials
+        // Handle the scenario as needed
+        if (result.user) {
+          console.log("User signed in:", result.user);
+          // You may want to navigate to a different page or update the UI
+        }
+      } else {
+        try {
+          await linkWithPopup(result.user, provider);
+          // Account successfully linked, you can handle this as needed
+          console.log("Facebook account linked successfully");
+          // You may want to navigate to a different page or update the UI
+        } catch (error) {
+          console.error("Error linking Facebook account:", error);
+        }
+      }
+    } catch (error) {
+      console.error("Error signing in with Facebook:", error);
     }
   };
 
@@ -113,12 +146,12 @@ function Login() {
             </div>
           </form>
           <div className="flex items-center justify-evenly mt-2">
-            <a href="f" className="">
+            <span href="f" className="">
               <FaGoogle className="text-white hover:text-red-500 text-3xl" />
-            </a>
-            <a href="f">
+            </span>
+            <span onClick={loginWithFacebook}>
               <FaFacebook className="text-white hover:text-red-500 text-3xl" />
-            </a>
+            </span>
             <a href="login">
               <FaGithub className="text-white hover:text-red-500 text-3xl" />
             </a>
