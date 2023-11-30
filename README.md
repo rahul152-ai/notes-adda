@@ -1,6 +1,6 @@
 What is Notes_Adda?
 
-Notes_Adda is Notes sharing web application. A platform where people can share notes in form of pdf or write a blog about any topic . Is is single hub to share their content,notes in order to accelerate of help other.
+Notes_Adda is Notes sharing web application. A platform where people can share notes in the form of pdf or write a blog about any topic. It is a single hub to share their content, and notes in order to accelerate or help others.
 
 image.png
 
@@ -19,16 +19,16 @@ Mongoose is a popular Object Data Modeling (ODM) library for Node.js and MongoDB
 
 installation
 
-For installing this project on your local system .
+For installing this project on your local system.
 You require the following technologies:-
 1 ) Node.js
-2 ) Mongodb
+2 ) MongoDB
 3 ) Npm
 
-COMMAND REQUIRE FO LOCAL SETUP
-Fork the repositery form https://github.com/rahul152-ai/notes-adda
+COMMAND REQUIRES FO LOCAL SETUP
+Fork the repository form https://github.com/rahul152-ai/notes-adda
 and then clone this on you local https://github.com/<you-github-account>/notes-adda.git
-Then go to local system where you cloned this
+Then go to the local system where you cloned this
 
 cd to api and then npm install
 create a env file and setup your MONGO_URL
@@ -40,4 +40,4 @@ How to use the Notes_Adda web application
 create a account
 login with you crediential
 
-To share notes go to share notes and provide the required content
+To share notes go to share notes and provide the required content test
